@@ -358,9 +358,7 @@ public class BrowserUtils {
         }
     }
 
-
-    /**
-     * Clicks on an element using JavaScript
+    /*** Clicks on an element using JavaScript
      *
      * @param element _
      */
@@ -446,8 +444,7 @@ public class BrowserUtils {
     }
 
 
-    /**
-     * This method creates a random string
+    /*** This method creates a random string
      *
      * @param length number of letters in string
      * @return random string
@@ -508,7 +505,4 @@ public class BrowserUtils {
         List<Map<String, String>> list = dataTable.asMaps(String.class, String.class);
         return list.get(0).get(value);
     }
-
-
-
 }

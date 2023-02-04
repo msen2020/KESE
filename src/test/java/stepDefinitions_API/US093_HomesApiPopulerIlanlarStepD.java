@@ -1,12 +1,12 @@
 package stepDefinitions_API;
 
-import com.kese.utilities.ConfigurationReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
+import utilities.ConfigurationReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,14 +32,11 @@ public class US093_HomesApiPopulerIlanlarStepD {
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 
-
-
     @Then("system should display max {int} populer ev ilani for home API")
     public void system_should_display_max_populer_ev_ilani_for_home_api(int advNumber) {
 
         List<String> homeList = response.body().jsonPath().getList("_id");
         Assert.assertEquals(advNumber,homeList.size());
-
     }
 
     @Then("populer ev ilanlari should be displayed by read count order for home API")
@@ -47,10 +44,9 @@ public class US093_HomesApiPopulerIlanlarStepD {
 
         List<Integer> actualReadCounterList = response.body().jsonPath().getList("okunmasayisi");
 
-        List<Integer> sortedReadCounterList = new ArrayList<Integer>(actualReadCounterList);
+        List<Integer> sortedReadCounterList = new ArrayList<>(actualReadCounterList);
         sortedReadCounterList.sort(Collections.reverseOrder());
 
         Assert.assertEquals(sortedReadCounterList, actualReadCounterList);
-
     }
 }

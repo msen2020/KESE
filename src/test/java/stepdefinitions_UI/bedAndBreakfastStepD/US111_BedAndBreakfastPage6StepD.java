@@ -1,7 +1,7 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.When;
+import pages.UI.BedAndBreakfastPage;
 
 public class US111_BedAndBreakfastPage6StepD {
     BedAndBreakfastPage babPage = new BedAndBreakfastPage();
@@ -11,6 +11,5 @@ public class US111_BedAndBreakfastPage6StepD {
         babPage.page6inputBoxRoom.sendKeys(roomFeatures);
         babPage.page6inputBoxHome.sendKeys(homeFeatures);
         babPage.page6inputBoxBreakf.sendKeys(breakfastFeatures);
-
     }
 }

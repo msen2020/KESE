@@ -1,10 +1,10 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.BedAndBreakfastPage;
 
 public class US107_BadAndBreakfastPage4StepDefs {
 
@@ -15,7 +15,6 @@ public class US107_BadAndBreakfastPage4StepDefs {
     public void buttonShouldBeDisplayed(String arg0) {
         Assert.assertTrue(page.ilerleButton.isDisplayed());
     }
-
 
     @Then("{string} button should not be clickable")
     public void buttonShouldNotBeClickable(String arg0) {

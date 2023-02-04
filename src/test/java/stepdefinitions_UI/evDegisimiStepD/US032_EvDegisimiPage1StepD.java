@@ -1,15 +1,14 @@
 package stepdefinitions_UI.evDegisimiStepD;
 
 
-
-import com.kese.pages.UI.EvDegisimiPage;
-import com.kese.utilities.BrowserUtils;
-import com.kese.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.UI.EvDegisimiPage;
+import utilities.BrowserUtils;
+import utilities.Driver;
 
 public class US032_EvDegisimiPage1StepD {
 
@@ -22,16 +21,11 @@ public class US032_EvDegisimiPage1StepD {
     WebElement ilerleB = Driver.get().findElement(By.id("next"));
 
 
-
-
-
     @And("ilerle button must be visible")
     public void ilerleButtonMustBeVisible() {
 
         Assert.assertTrue(ilerleB.isDisplayed());
     }
-
-
 
     @Given("ilerle button must be clickable when the user clicks {string}")
     public void ilerleButtonMustBeClickableWhenTheUserClicks(String EvTipi) {
@@ -41,7 +35,6 @@ public class US032_EvDegisimiPage1StepD {
             Assert.assertTrue(page.ilerleButton.isEnabled());
         } else if (EvTipi.equals("Studyo Daire") && studyo.isEnabled()) {
             Assert.assertTrue(page.ilerleButton.isEnabled());
-
         }
     }
 
@@ -57,14 +50,10 @@ public class US032_EvDegisimiPage1StepD {
 //
         Assert.assertEquals(warningHouse,actual);
 //         // BrowserUtils.waitForVisibility(warning,5).isDisplayed();
-
-
     }
-
 
     @And("user can click ilerle button")
     public void userCanClickIlerleButton() {
         BrowserUtils.waitForClickability(Driver.get().findElement(By.xpath("//button[@class='btn btn-light py-1  bg-light']")),5).click();
-
     }
 }

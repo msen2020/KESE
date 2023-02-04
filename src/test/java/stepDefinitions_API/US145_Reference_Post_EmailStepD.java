@@ -1,14 +1,14 @@
 package stepDefinitions_API;
 
 import com.github.javafaker.Faker;
-import com.kese.pages.API.Reference;
-import com.kese.pages.API.Users;
-import com.kese.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import pages.API.Reference;
+import pages.API.Users;
+import utilities.ConfigurationReader;
 
 import java.util.Map;
 
@@ -45,7 +45,6 @@ public class US145_Reference_Post_EmailStepD {
         assertNotNull(loginAuthorResponse.body().jsonPath().get("token"));
         assertEquals(Integer.parseInt(expectedValues.get("statusCode")), loginAuthorResponse.getStatusCode());
         assertEquals(Boolean.parseBoolean(expectedValues.get("sonuc")), loginAuthorResponse.body().jsonPath().get("sonuc"));
-
     }
 
     @Then("status code should be {int} and sonuc should be {string} for user API")
@@ -54,7 +53,6 @@ public class US145_Reference_Post_EmailStepD {
         assertNotNull(loginAuthorResponse.body().jsonPath().get("token"));
         assertEquals(statusCode, loginAuthorResponse.getStatusCode());
         assertEquals(Boolean.parseBoolean(sonuc), loginAuthorResponse.body().jsonPath().get("sonuc"));
-
     }
 
     @When("user adds a new email with POST for reference API")
@@ -65,7 +63,6 @@ public class US145_Reference_Post_EmailStepD {
 
         newUserResponse = newUser.createNewUser(femail, fusername, fpassword);
         referenceResponse = reference.createNewReference(loginToken, femail);
-
     }
 
     @Then("reference author should be {string} and reference member's count should be {int}")
@@ -74,7 +71,6 @@ public class US145_Reference_Post_EmailStepD {
         assertEquals(authorEmail, referenceResponse.getBody().jsonPath().get("reference_author"));
         assertEquals(femail, referenceResponse.getBody().jsonPath().get("reference_member"));
         assertEquals(referenceCount, referenceResponse.getBody().jsonPath().get("reference_count"));
-
     }
 
     @Then("reference member's role should be {string} for reference API")
@@ -85,7 +81,6 @@ public class US145_Reference_Post_EmailStepD {
         String refMemberRole = loginMemberResponse.getBody().jsonPath().get("rol");
 
         assertEquals(membersRole, refMemberRole);
-
     }
 
     @Given("{string} user is authorized to add an email for reference API")

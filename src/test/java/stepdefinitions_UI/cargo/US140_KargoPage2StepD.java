@@ -1,8 +1,8 @@
 package stepdefinitions_UI.cargo;
 
-import com.kese.pages.UI.KargoPage;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.UI.KargoPage;
 
 public class US140_KargoPage2StepD {
     KargoPage page2 = new KargoPage();

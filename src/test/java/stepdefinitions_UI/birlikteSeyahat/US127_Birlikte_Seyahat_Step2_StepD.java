@@ -1,12 +1,13 @@
 package stepdefinitions_UI.birlikteSeyahat;
 
-import com.kese.pages.UI.BirlikteSeyahatPage;
-import com.kese.utilities.BrowserUtils;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import pages.UI.BirlikteSeyahatPage;
+import utilities.BrowserUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +34,6 @@ public class US127_Birlikte_Seyahat_Step2_StepD {
 
     @And("user confirm that starting point is selectable")
     public void userConfirmThatStartingPointIsSelectable() {
-
-
         BrowserUtils.waitAndSendKeys(birlikteSeyahatPage.firstTextBox, "Ann");
         birlikteSeyahatPage.chooseOption.click();
         Assert.assertTrue(birlikteSeyahatPage.firstTextBoxValidation.getText().contains("Ba"));
@@ -63,8 +62,6 @@ public class US127_Birlikte_Seyahat_Step2_StepD {
 
         BrowserUtils.waitAndSendKeys(birlikteSeyahatPage.seventhTextBox, "Las");
         birlikteSeyahatPage.chooseOption.click();
-
-
     }
 
     @And("user confirm that selected passing point should be visible as a list")
@@ -76,7 +73,6 @@ public class US127_Birlikte_Seyahat_Step2_StepD {
 
         for (WebElement e : elementList) {
             System.out.println("element name: " + e.getText());
-
         }
 
         System.out.println("after element list size: " + elementList.size());
@@ -84,7 +80,6 @@ public class US127_Birlikte_Seyahat_Step2_StepD {
         Assert.assertTrue(elementList.get(1).getText().contains("Delaware"));
         Assert.assertTrue(elementList.get(2).getText().contains("Boston"));
         Assert.assertTrue(elementList.get(3).getText().contains("Las Vegas"));
-
     }
 
     @And("user confirm that passing points are deletable")
@@ -93,23 +88,15 @@ public class US127_Birlikte_Seyahat_Step2_StepD {
 
         List<WebElement> deleteElementList = birlikteSeyahatPage.deleteElements;
 
-        ArrayList<WebElement> arrayElements = new ArrayList<>();
-        arrayElements.addAll(deleteElementList);
+        ArrayList<WebElement> arrayElements = new ArrayList<>(deleteElementList);
 
 
         for (int i = 0; i < arrayElements.size(); i++) {
-
             BrowserUtils.waitAndClick(arrayElements.get(0));
-
         }
 
         System.out.println("after element list deleted, list size; " + deleteElementList.size());
 
-
-        Assert.assertTrue(deleteElementList.size() == 0);
-
-
+        Assert.assertEquals(0, deleteElementList.size());
     }
-
-
 }

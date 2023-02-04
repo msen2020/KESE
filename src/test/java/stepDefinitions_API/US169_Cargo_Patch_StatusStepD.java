@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
+import pages.API.Cargos;
+import pages.API.Users;
 
 import static org.junit.Assert.assertEquals;
 // Nursel
@@ -19,14 +21,12 @@ public class US169_Cargo_Patch_StatusStepD {
         Users user = new Users();
         loginResponse = user.postUserLogin(email, password);
         loginToken = loginResponse.body().jsonPath().get("token").toString();
-
     }
 
     @And("user updates {string} for {string} with PATCH for cargo API")
     public void user_updates_for_with_PATCH_for_cargo_API(String status, String id) {
 
         patchStatusResponse = new Cargos().updateCargoStatus(status, id, loginToken);
-
     }
 
     @Then("status code should be {int} and modified info should be {int} for cargo API")

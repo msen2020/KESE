@@ -1,7 +1,7 @@
 package pages.UI;
 
-import com.kese.utilities.BrowserUtils;
 import org.openqa.selenium.By;
+import utilities.BrowserUtils;
 
 public class LogginPage extends CommonPage{
 

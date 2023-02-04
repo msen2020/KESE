@@ -1,12 +1,12 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
-import com.kese.pages.UI.MainPage;
-import com.kese.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import pages.UI.BedAndBreakfastPage;
+import pages.UI.MainPage;
+import utilities.BrowserUtils;
 
 public class US122_BedAndBreakfastPage10StepD {
 

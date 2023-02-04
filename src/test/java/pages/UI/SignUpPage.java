@@ -1,9 +1,9 @@
 package pages.UI;
 
-import com.kese.utilities.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.BrowserUtils;
 
 public class SignUpPage extends CommonPage {
 
@@ -40,8 +40,6 @@ public class SignUpPage extends CommonPage {
 
     @FindBy(xpath = "//input[@type='text']")
     public WebElement SignupUserInput;
-
-
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement kayitOlusturButton;

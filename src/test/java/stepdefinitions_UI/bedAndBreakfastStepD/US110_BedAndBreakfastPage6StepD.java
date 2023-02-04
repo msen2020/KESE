@@ -1,10 +1,10 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
+import pages.UI.BedAndBreakfastPage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,32 +15,24 @@ public class US110_BedAndBreakfastPage6StepD {
 
     BedAndBreakfastPage bedAndBreakfastPage= new BedAndBreakfastPage();
 
-
     @Then("verify user sees the {string} header on the 6th BedAndBreakfast Page")
     public void verify_user_sees_the_header_on_the_6th_bed_and_breakfast_page(String expectedText) {
         String actualText = bedAndBreakfastPage.page6header.getText();
         assertEquals(expectedText,actualText);
-
     }
-
 
     @Then("verify {string} text is displayed on the 6th BedAndBreakfast Page")
     public void verify_text_is_displayed_on_the_6th_bed_and_breakfast_page(String expectedParag) {
 
         String actualParag = bedAndBreakfastPage.pageInfoText.getText();
         assertEquals(expectedParag,actualParag);
-
     }
-
 
     @Then("verify user is on the {string} BedAndBreakfast page")
     public void verify_user_is_on_the_bed_and_breakfast_page(String expectedPageNum) {
         String actualPageNum = bedAndBreakfastPage.theNumberOfPage.getText();
         assertEquals(expectedPageNum,actualPageNum);
-
     }
-
-
 
     @Then("verify user can see the each header such as")
     public void verify_user_can_see_the_each_header_such_as(List<String> expectedHeaders) {
@@ -49,12 +41,8 @@ public class US110_BedAndBreakfastPage6StepD {
         for (WebElement header: headersElem){
             actualHeaders.add(header.getText());
         }
-
         assertEquals(expectedHeaders,actualHeaders);
-
     }
-
-
 
     @Then("verify {string} is displayed in {string} on the 6th BedAndBreakfast Page")
     public void verify_is_displayed_in_on_the_6th_bed_and_breakfast_page(String expectedSample, String expectedInputBox) {
@@ -73,9 +61,6 @@ public class US110_BedAndBreakfastPage6StepD {
             actualSample = bedAndBreakfastPage.page6inputBoxBreakf.getText();
             assertEquals(expectedSample,actualSample);
         }
-
-
-
     }
 
 

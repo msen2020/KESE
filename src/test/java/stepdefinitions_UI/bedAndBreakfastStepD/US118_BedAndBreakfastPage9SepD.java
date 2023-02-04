@@ -1,9 +1,9 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.BedAndBreakfastPage;
 
 public class US118_BedAndBreakfastPage9SepD {
 
@@ -38,6 +38,4 @@ public class US118_BedAndBreakfastPage9SepD {
         Assert.assertTrue(isCalendarDisable);
         // burayi kontrol et
     }
-
-
 }

@@ -1,7 +1,8 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.UI.BedAndBreakfastPage;
 
 
 public class US101_BedAndBreakfastPage1StepD extends BedAndBreakfastPage {

@@ -1,13 +1,13 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
-import com.kese.utilities.BrowserUtils;
-import com.kese.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.UI.BedAndBreakfastPage;
+import utilities.BrowserUtils;
+import utilities.Driver;
 
 public class US117_BedAndBreakfastPage9StepD {
     BedAndBreakfastPage bab = new BedAndBreakfastPage();
@@ -31,13 +31,11 @@ public class US117_BedAndBreakfastPage9StepD {
         BrowserUtils.waitFor(1 / 2);
         bab.page9todaysLocator.click();
         bab.ilerleButton.click();
-
     }
 
     @Then("verify if the {string}  is visible")
     public void verifyIfTheIsVisible(String text) {
         WebElement ilerleLocator = Driver.get().findElement(By.xpath("//*[contains(text(), '" + text + "')]"));
         Assert.assertTrue(ilerleLocator.isDisplayed());
-
     }
 }

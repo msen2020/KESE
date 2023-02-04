@@ -1,6 +1,5 @@
 package stepDefinitions_API;
 
-import com.kese.utilities.ConfigurationReader;
 import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -9,6 +8,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import org.junit.Assert;
+import utilities.ConfigurationReader;
 
 import java.io.File;
 import java.util.ArrayList;

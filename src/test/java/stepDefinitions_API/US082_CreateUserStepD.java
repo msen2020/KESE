@@ -1,10 +1,10 @@
 package stepDefinitions_API;
 
 import com.github.javafaker.Faker;
-import com.kese.pages.API.Users;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.API.Users;
 
 
 public class US082_CreateUserStepD {

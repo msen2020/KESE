@@ -1,9 +1,9 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.BedAndBreakfastPage;
 
 public class US124_BedAndBreakfastAllStepD {
 
@@ -12,19 +12,12 @@ public class US124_BedAndBreakfastAllStepD {
     @And("user choose onaltiyirmi, erkek, kisi sayisi iki, ozel oda imkani ve kahvalti as a hayir")
     public void userChooseonaltiyirmiErkekKisiSayisiikiOzelOdaImkaniVeKahvaltiAsAHayir() throws InterruptedException {
 
-
-
-
         bedAndBreakfastPage.page4Age2.click();
         bedAndBreakfastPage.page4GenderErkek.click();
         bedAndBreakfastPage.page4KisiSayisiIncrement.click();
         bedAndBreakfastPage.page4KisiSayisiIncrement.click();
         bedAndBreakfastPage.page4OzelOdaImkaniHAYIR.click();
         bedAndBreakfastPage.page4KahvaltiHAYIR.click();
-
-
-
-
     }
 
     @And("user verifies the yas araligi farketmez, cinsiyet erkek, kisi sayisi iki, ozel oda ve kahvalti hayir")
@@ -54,14 +47,10 @@ public class US124_BedAndBreakfastAllStepD {
         bedAndBreakfastPage.page6inputBoxRoom.sendKeys(room);
         bedAndBreakfastPage.page6inputBoxBreakf.sendKeys(breakfast);
         Thread.sleep(3000);
-
-
-
     }
 
     @When("user verifies the value of description input is same with {string}, {string} and {string} on the bedandbreakfastpage step six page")
     public void user_verifies_the_value_of_description_input_is_same_with_and_on_the_bedandbreakfastpage_step_six_page(String home, String room, String breakfast) {
-
         String homemu = bedAndBreakfastPage.page6inputBoxHome.getAttribute("value");
         Assert.assertTrue(homemu.contains(home));
         String roommu = bedAndBreakfastPage.page6inputBoxRoom.getAttribute("value");
@@ -69,6 +58,4 @@ public class US124_BedAndBreakfastAllStepD {
         String breakmi = bedAndBreakfastPage.page6inputBoxBreakf.getAttribute("value");
         Assert.assertTrue(breakmi.contains(breakfast));
     }
-
-
 }

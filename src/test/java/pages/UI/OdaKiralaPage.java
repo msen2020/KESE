@@ -1,11 +1,11 @@
 package pages.UI;
 
-import com.kese.utilities.BrowserUtils;
-import com.kese.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.BrowserUtils;
+import utilities.Driver;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,9 +16,7 @@ import java.util.Map;
 public class OdaKiralaPage extends CommonPage {
 
 
-    /*
-
-        * ARKADASLAR LUTFEN KENDI KODLARINIZI YAZMADAN ONCE MASTER BRANCHE DEN FETCHE YAPTIGINIZDAN VE
+    /** ARKADASLAR LUTFEN KENDI KODLARINIZI YAZMADAN ONCE MASTER BRANCHE DEN FETCHE YAPTIGINIZDAN VE
     KENDI BRANCHE INIZIN UPDATE OLDUGUNDAN EMIN OLALIM
 
         * KENDI CALISTIGIMIZ DOSYALAR HARICINDE BASKA DOSYALAR UZERINDE KI BASKALARININ YAZDIGI KODLAR
@@ -35,9 +33,6 @@ public class OdaKiralaPage extends CommonPage {
         ONCE LOCAL MASTER IMIZI GUNCELLEMELI, DAHA SONRA KENDI LOCAL BRANCHE IMIZE GECEREK LOCAL BRANCHE IMIZI DE
         UPDATE ETMELI VE YENI KODLARIMIZI YAZMAYA BASLAMALI BITIRDIKTEN SONRA REMOTE BRANCHE PUSH YAPMALI VE BU DONGUYU
         PROJE BOYUNCA DEVAM ETTIRMELIYIZ.
-
-
-
     * */
 
     // Page 1
@@ -777,19 +772,13 @@ public class OdaKiralaPage extends CommonPage {
 
         // returns String format of displayed booked dates
         return dateBegin + " - " + dateEnd;
-
     }
 
     public void uploadPage10Images(int totalPictureNumber) {
         for (int i = 1; i <= totalPictureNumber; i++)
             Driver.get().findElement(By.id("file-upload" + i)).
                     sendKeys((System.getProperty("user.dir") + "/src/test/resources/pictures/" + i + ".jpg"));
-
     }
-
-
-    @FindBy(xpath = "//p[contains(text(),'Odanızın ve evinizin ilgili alanlarının fotoğrafla')]")
-    public WebElement page10Resim_ve_FotograflarAciklama;
 
     //MSEN OdapageStep10
     public static final By page10theStepNumberOfPage = By.className("//div[@class='navbar-nav me-auto fs-3']");

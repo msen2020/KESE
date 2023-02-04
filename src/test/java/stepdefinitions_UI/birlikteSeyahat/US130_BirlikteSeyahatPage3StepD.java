@@ -1,9 +1,9 @@
 package stepdefinitions_UI.birlikteSeyahat;
 // QA Engineer msen
 
-import com.kese.pages.UI.BirlikteSeyahatPage;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.UI.BirlikteSeyahatPage;
 
 public class US130_BirlikteSeyahatPage3StepD {
     BirlikteSeyahatPage page3 = new BirlikteSeyahatPage();
@@ -18,8 +18,8 @@ public class US130_BirlikteSeyahatPage3StepD {
 
     @Then("verifies that {string} button shouldn't be clickable as a default")
     public void verifiesThatIfButtonShouldnTBeClickableAsADefault(String arg0) {
-        Boolean flag = true;
-        if (page3.ilerleButton.getAttribute("style").substring(8, 19).equals("not-allowed")) {
+        boolean flag = true;
+        if (page3.ilerleButton.getAttribute("style").startsWith("not-allowed", 8)) {
             flag = false;
         }
         Assert.assertFalse(flag);
@@ -39,6 +39,4 @@ public class US130_BirlikteSeyahatPage3StepD {
         page3.ilerleButton.click();
         Assert.assertTrue(warning, page3.page3ZorunluBilgilerWarning.isDisplayed());
     }
-
-
 }

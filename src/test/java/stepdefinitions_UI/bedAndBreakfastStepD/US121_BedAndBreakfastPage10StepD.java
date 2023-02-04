@@ -1,6 +1,7 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
+
+import pages.UI.BedAndBreakfastPage;
 
 public class US121_BedAndBreakfastPage10StepD {
 
