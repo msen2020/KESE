@@ -6,7 +6,7 @@ Feature:US107 - BAB Page - Step 4 next function from Step 4 to Step 5
     And user logs in with "nbc@gmail.com" and "jkl123"
     And user navigates to page 4 in Bed & Breakfast
 
-    @MH-183
+  @MH-183
   Scenario: "ilerle" button is displayed
     Then "ilerle" button should be displayed
 
@@ -17,12 +17,12 @@ Feature:US107 - BAB Page - Step 4 next function from Step 4 to Step 5
     When click the "ilerle" button
     Then "*Lütfen cinsiyet, yaş aralığı ve kişi sayısı seçiniz." warning should be visible.
 
-    Scenario:After adding the mandatory information, the Next button should be clickable.
-      When user clicks "10-15" age
-      And user clicks "Kadin" gender
-      And user clicks + button
-      Then "ilerle" button should be clickable
-      Then Verify "5 / 10" page is displayed
+  Scenario:After adding the mandatory information, the Next button should be clickable.
+    When user clicks "10-15" age
+    And user clicks "Kadin" gender
+    And user clicks + button
+    Then "ilerle" button should be clickable
+    Then Verify "5 / 10" page is displayed
 
 
 

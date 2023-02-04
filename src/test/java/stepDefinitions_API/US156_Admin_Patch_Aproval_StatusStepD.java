@@ -1,12 +1,13 @@
 package stepDefinitions_API;
 
-import com.kese.pages.API.Breakfast;
-import com.kese.utilities.ConfigurationReader;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.API.Breakfast;
+import utilities.ConfigurationReader;
 
 import static io.restassured.RestAssured.given;
 

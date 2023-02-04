@@ -1,8 +1,8 @@
 package stepdefinitions_UI.birlikteSeyahat;
 
-import com.kese.pages.UI.BirlikteSeyahatPage;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import pages.UI.BirlikteSeyahatPage;
 
 public class US126_BirlikteSeyahatStepD {
 

@@ -1,23 +1,21 @@
 package stepdefinitions_UI.evDegisimiStepD;
 
-import com.kese.pages.UI.EvDegisimiPage;
-import com.kese.utilities.Driver;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.UI.EvDegisimiPage;
+import utilities.Driver;
 
 public class US031_EvDegisimiPage1StepD {
 
     EvDegisimiPage page = new EvDegisimiPage();
 
 
-
     @Given("user should see the Ev Tipi")
     public void userShouldSeeTheEvTipi() {
         page.page1EvTipiTitle.isDisplayed();
     }
-
 
 
     @Given("user asserts {string} is visible and clicable")
@@ -37,23 +35,17 @@ public class US031_EvDegisimiPage1StepD {
             Assert.assertTrue(studyo.isDisplayed());
             Assert.assertTrue(studyo.isEnabled());
         }
-
-
     }
-
 
     @Given("user asserts {string} is visiblev")
     public void userAssertsIsVisiblev(String pagenumber) {
         boolean  pagenumber1=page.page1oneSlashTenWriting.isDisplayed();
         Assert.assertTrue(pagenumber1);
-
     }
-
 
     @Given("the user should see {string}")
     public void theUserShouldSee(String message) {
         String actual = page.page1HomeDegisimEvTuruWriting.getText();
         Assert.assertEquals(message, actual);
     }
-
 }

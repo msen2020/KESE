@@ -1,12 +1,13 @@
 package stepdefinitions_UI.cargo;
 
-import com.kese.pages.UI.KargoPage;
-import com.kese.pages.UI.MainPage;
-import com.kese.utilities.BrowserUtils;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import pages.UI.KargoPage;
+import pages.UI.MainPage;
+import utilities.BrowserUtils;
 
 public class US139_New_Cargo_StepD {
     MainPage mainPage = new MainPage();
@@ -31,11 +32,11 @@ public class US139_New_Cargo_StepD {
                 break;
             // Here you are in 2nd page
             BrowserUtils.waitAndClick(page.page2_BaslangicNoktasiInput);
-            BrowserUtils.waitAndSendKeys(page.step2_selectText1Input,"Frankfurt, Almanya");
+            BrowserUtils.waitAndSendKeys(page.step2_selectText1Input, "Frankfurt, Almanya");
             BrowserUtils.waitFor(1);
             BrowserUtils.waitAndSendKeys(page.page2_BaslangicNoktasiInput, Keys.ENTER);
             BrowserUtils.waitAndClick(page.page2_BitisNoktasiInput);
-            BrowserUtils.waitAndSendKeys(page.page2_BitisNoktasiInput,"Köln, Almanya");
+            BrowserUtils.waitAndSendKeys(page.page2_BitisNoktasiInput, "Köln, Almanya");
             BrowserUtils.waitFor(1);
             BrowserUtils.waitAndSendKeys(page.page2_BitisNoktasiInput, Keys.ENTER);
             BrowserUtils.waitFor(1);

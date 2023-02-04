@@ -1,10 +1,10 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
-import com.kese.pages.UI.EvDegisimiPage;
-import com.kese.utilities.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import pages.UI.BedAndBreakfastPage;
+import pages.UI.EvDegisimiPage;
+import utilities.BrowserUtils;
 
 import java.util.List;
 
@@ -17,10 +17,7 @@ public class US112_BedAndBreakfastPage7SepD {
         String actualTitle = bedAndBreakfastPage.page7aktivitelerText.getText();
         BrowserUtils.verifyElementDisplayed(bedAndBreakfastPage.page7aktivitelerText);
         Assert.assertEquals(expectedTitle,actualTitle);
-
-
     }
-
 
     @Then("user verifies that {string} message is visible at Bed & Breakfast")
     public void user_verifies_that_message_is_visible_at_Bed_Breakfast(String expectedInfoText) {
@@ -39,10 +36,6 @@ public class US112_BedAndBreakfastPage7SepD {
     public void user_verifies_that_all_selections_should_be_clickable_at_Bed_Breakfast(List<String> selections) {
         for (String selection : selections) {
             Assert.assertTrue(new EvDegisimiPage().clickable(selection));
-
         }
-
-
     }
-
 }

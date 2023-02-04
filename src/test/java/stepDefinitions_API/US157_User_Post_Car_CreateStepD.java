@@ -1,12 +1,12 @@
 package stepDefinitions_API;
 
-import com.kese.pages.API.Cars;
-import com.kese.pages.API.Photos;
-import com.kese.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.API.Cars;
+import pages.API.Photos;
+import utilities.ConfigurationReader;
 
 import static io.restassured.RestAssured.given;
 
@@ -38,7 +38,6 @@ public class US157_User_Post_Car_CreateStepD {
 
                 .when()
                 .post(ConfigurationReader.get("kese_URI") +endPoint);
-
     }
 
     @Then("user verifies the cars advertise added and status code is {int}")
@@ -46,8 +45,5 @@ public class US157_User_Post_Car_CreateStepD {
 
         response.prettyPrint();
         Assert.assertEquals(statusCode, response.getStatusCode());
-
     }
-
-
 }

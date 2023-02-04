@@ -1,7 +1,6 @@
 package stepDefinitions_API;
 
 
-import com.kese.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.builder.RequestSpecBuilder;
@@ -11,6 +10,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import org.junit.Assert;
+import utilities.ConfigurationReader;
 
 import java.util.List;
 

@@ -1,8 +1,6 @@
 package stepdefinitions_UI.birlikteSeyahat;
 //selen
-import com.kese.pages.UI.BirlikteSeyahatPage;
-import com.kese.utilities.BrowserUtils;
-import com.kese.utilities.Driver;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +8,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import pages.UI.BirlikteSeyahatPage;
+import utilities.BrowserUtils;
+import utilities.Driver;
 
 public class US133_BirlikteSeyahatPage4StepD {
     BirlikteSeyahatPage birlikteSeyahatPage = new BirlikteSeyahatPage();

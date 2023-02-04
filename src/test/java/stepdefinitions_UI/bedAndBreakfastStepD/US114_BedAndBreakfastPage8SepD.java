@@ -1,12 +1,12 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
-import com.kese.pages.UI.MainPage;
-import com.kese.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import pages.UI.BedAndBreakfastPage;
+import pages.UI.MainPage;
+import utilities.BrowserUtils;
 
 public class US114_BedAndBreakfastPage8SepD {
     BedAndBreakfastPage page = new BedAndBreakfastPage();
@@ -14,9 +14,9 @@ public class US114_BedAndBreakfastPage8SepD {
 
     @And("user navigates to page {int} in Bed And Breakfast Page")
     public void userNavigatesToPageInBedAndBreakfastPage(int sayfa) {
-        while(true){
-            if( sayfa < 1 || sayfa > 10 ){
-                Assert.fail("Not valid page number :"+sayfa);
+        while (true) {
+            if (sayfa < 1 || sayfa > 10) {
+                Assert.fail("Not valid page number :" + sayfa);
             }
             // Here you are in Main page
             mainPage.ilanVerDropdownMenu.click();
@@ -76,9 +76,9 @@ public class US114_BedAndBreakfastPage8SepD {
             if (sayfa == 8)
                 break;
             // Here you are in 8th page
-            for(WebElement element:page.step8_yesTexts){
+            for (WebElement element : page.step8_yesTexts) {
                 element.click();
-                BrowserUtils.waitFor(1/2);
+                BrowserUtils.waitFor(1 / 2);
             }
             page.ilerleButton.click();
             if (sayfa == 9)
@@ -87,10 +87,11 @@ public class US114_BedAndBreakfastPage8SepD {
             BrowserUtils.waitFor(1);
             page.step9_selectDate.click();
             page.step9_todaysLocator.click();
-            BrowserUtils.waitFor(1/2);
+            BrowserUtils.waitFor(1 / 2);
             page.step9_todaysLocator.click();
             page.ilerleButton.click();
             break;
             // Here you are in 10th page
+        }
     }
-}}
+}

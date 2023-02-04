@@ -1,11 +1,11 @@
 package stepdefinitions_UI.birlikteSeyahat;
 
-import com.kese.pages.UI.BirlikteSeyahatPage;
-import com.kese.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.BirlikteSeyahatPage;
+import utilities.BrowserUtils;
 
 public class US131_BirlikteSeyahatPage4StepD {
 
@@ -15,8 +15,6 @@ public class US131_BirlikteSeyahatPage4StepD {
     @Given("{string} text is displayed")
     public void textIsDisplayed(String text) {
         Assert.assertTrue(bsPage.isDisplayedText(text));
-
-
     }
 
     @Given("Yaş Aralığı should be selectable up to {int}")
@@ -48,30 +46,25 @@ public class US131_BirlikteSeyahatPage4StepD {
         }
     }
 
-
     @Given("user should be able to select from {int} to {int} number")
     public void userShouldBeAbleToSelectFromToNumber(int min, int max) {
         for (int i = min; i <= max; i++) {
             bsPage.page4KisiSayisiIncrement.click();
         }
-        Assert.assertEquals("15",bsPage.page4KisiSayisiValue.getText());
+        Assert.assertEquals("15", bsPage.page4KisiSayisiValue.getText());
     }
-
 
     @Given("Cinsiyet should be selectable only {string} and {string}gender")
     public void cinsiyetShouldBeSelectableOnlyAndGender(String cinsiyet, String num) {
 
         bsPage.clickPage4Gender(cinsiyet, num);
         Assert.assertTrue(bsPage.enablePage4Gender(cinsiyet, num));
-
-
     }
-
 
     @Then("verify user select only one {string} choice")
     public void verifyUserSelectOnlyOneAndChoice(String cinsiyet) {
-        switch (cinsiyet){
-        case "Kadin":
+        switch (cinsiyet) {
+            case "Kadin":
                 bsPage.clickPage4Gender("Kadin", "1");
                 System.out.println(bsPage.displayedGreenPage4Gender("Kadin", "1"));
                 System.out.println(bsPage.enablePage4Gender("Erkek", "1"));
@@ -84,16 +77,16 @@ public class US131_BirlikteSeyahatPage4StepD {
                 Assert.assertTrue(bsPage.displayedGreenPage4Gender("Erkek", "1"));
                 Assert.assertTrue(bsPage.enablePage4Gender("Kadin", "1"));
                 Assert.assertTrue(bsPage.enablePage4Gender("Farketmez", "2"));
-           break;
+                break;
             case "Farketmez":
                 bsPage.clickPage4Gender("Farketmez", "2");
                 Assert.assertTrue(bsPage.displayedGreenPage4Gender("Farketmez", "1"));
                 Assert.assertTrue(bsPage.enablePage4Gender("Kadin", "1"));
                 Assert.assertTrue(bsPage.enablePage4Gender("Erkek", "1"));
                 break;
-            }
         }
-        }
+    }
+}
 
 
 

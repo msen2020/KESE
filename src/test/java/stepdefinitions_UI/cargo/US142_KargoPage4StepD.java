@@ -1,9 +1,9 @@
 package stepdefinitions_UI.cargo;
 //selen
-import com.kese.pages.UI.KargoPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.KargoPage;
 
 public class US142_KargoPage4StepD {
     KargoPage kargoPage = new KargoPage();
@@ -43,7 +43,5 @@ public class US142_KargoPage4StepD {
 
         kargoPage.step3_kargoBilgileriTextBox.clear();
         kargoPage.step3_kargoBilgileriTextBox.sendKeys(description);
-
     }
-
 }

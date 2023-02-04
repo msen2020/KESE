@@ -18,7 +18,6 @@ public class US132_BirlikteSeyahatPage4StepD {
     public void user_is_on_login_page() {
 
         Driver.get().get(ConfigurationReader.get("ui_url"));
-
     }
 
     @When("user navigates to page {int} in Birlikte Seyahat")
@@ -27,7 +26,6 @@ public class US132_BirlikteSeyahatPage4StepD {
         BirlikteSeyahatPage bsPage = new BirlikteSeyahatPage();
 
         bsPage.navigateToPageInBirlikteSeyahat(sayfa);
-
     }
 
     @Then("ilerle button should be visible on bs page")

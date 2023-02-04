@@ -1,10 +1,10 @@
 package stepdefinitions_UI.cargo;
 
-import com.kese.pages.UI.KargoPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.UI.KargoPage;
 
 public class US143_KargoPage4StepD {
 
@@ -42,7 +42,6 @@ public class US143_KargoPage4StepD {
         Assert.assertTrue(page.page4TarihSec1.isEnabled());
         page.page4_todayDateButton.click();
         page.page4_Day3Button.click();
-
     }
 
     @And("user selects Times at step four on kargo page")
@@ -50,7 +49,6 @@ public class US143_KargoPage4StepD {
        Assert.assertTrue(page.page4_SeyehatBaslangicSaatineTikla.isEnabled());
        page.page4_SeyehatBaslangicSaatineTikla.click();
        page.page4_SeyehatBaslangicSaati.click();
-
     }
 
     @And("user clicks Bilgileri Kaydet Button")

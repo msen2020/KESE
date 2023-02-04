@@ -1,12 +1,13 @@
 package stepDefinitions_API;
 
-import com.kese.pages.API.Homes;
-import com.kese.pages.API.Photos;
-import com.kese.utilities.ConfigurationReader;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.API.Homes;
+import pages.API.Photos;
+import utilities.ConfigurationReader;
 
 import static io.restassured.RestAssured.given;
 
@@ -30,7 +31,6 @@ public class US088_UserCreateNewHomeStepD {
                 .formParams(hms.dataMap())
                 .contentType("multipart/form-data; charset=UTF-8")
 
-
                 .multiPart("photo0", pht.PhotosMap().get("photo0"))
                 .multiPart("photo1", pht.PhotosMap().get("photo1"))
                 .multiPart("photo2", pht.PhotosMap().get("photo2"))
@@ -39,11 +39,7 @@ public class US088_UserCreateNewHomeStepD {
 
                 .when()
                 .post(ConfigurationReader.get("kese_URI") +endPoint);
-
-
-
     }
-
 
     @Then("user verifies the home advertise added and status code is {int}")
     public void userVerifiesTheHomeAdvertiseAddedAndStatusCodeIs(int statusCode) {

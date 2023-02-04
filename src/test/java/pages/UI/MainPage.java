@@ -1,10 +1,11 @@
 package pages.UI;
 
-import com.kese.utilities.BrowserUtils;
-import com.kese.utilities.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.BrowserUtils;
+import utilities.Driver;
 
 public class MainPage extends CommonPage {
 
@@ -44,14 +45,12 @@ public class MainPage extends CommonPage {
     public static boolean linkTextIsDisplayed(String link) {
         By linkText = By.linkText(link);
         return BrowserUtils.isDisplayed(linkText);
-
     }
 
     //click method
     public static void clickLinktext(String link) {
         By element = By.linkText(link);
         BrowserUtils.myClickMethod(element);
-
     }
 
     //US04 e ait locatorlar

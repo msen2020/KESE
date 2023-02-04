@@ -1,12 +1,12 @@
 package stepDefinitions_API;
 
-import com.kese.pages.API.Homes;
-import com.kese.utilities.TemporaryConfigUtils;
 import io.cucumber.java.en.*;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.API.Homes;
+import utilities.TemporaryConfigUtils;
 
 import java.io.File;
 import java.time.LocalDateTime;

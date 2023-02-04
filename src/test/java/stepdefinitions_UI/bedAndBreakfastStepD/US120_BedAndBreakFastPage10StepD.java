@@ -1,7 +1,7 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
 import io.cucumber.java.en.Then;
+import pages.UI.BedAndBreakfastPage;
 
 public class US120_BedAndBreakFastPage10StepD {
 

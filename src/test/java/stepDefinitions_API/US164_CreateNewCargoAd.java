@@ -1,12 +1,11 @@
 package stepDefinitions_API;
 
-
-import com.kese.utilities.TemporaryConfigUtils;
 import io.cucumber.java.en.Then;
+import utilities.TemporaryConfigUtils;
 
 import static io.restassured.RestAssured.given;
 
-public class US164_CreatNewCargoAd {
+public class US164_CreateNewCargoAd {
 
 
     @Then("POST a new cargo transport ad")
@@ -36,11 +35,5 @@ public class US164_CreatNewCargoAd {
                 .log().all()
                 .contentType("text/html; charset=utf-8")
                 .statusCode(202);
-
-
-
-
     }
-
-
 }

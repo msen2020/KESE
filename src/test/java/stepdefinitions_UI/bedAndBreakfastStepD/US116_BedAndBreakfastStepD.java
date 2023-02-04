@@ -1,12 +1,12 @@
 package stepdefinitions_UI.bedAndBreakfastStepD;
 
-import com.kese.pages.UI.BedAndBreakfastPage;
-import com.kese.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.UI.BedAndBreakfastPage;
+import utilities.Driver;
 
 import java.time.LocalDate;
 
@@ -35,9 +35,7 @@ public class US116_BedAndBreakfastStepD {
         Assert.assertTrue(bab.page9currentMonthText.getText().
 
                 toUpperCase().
-
                 contains(nowMonth)); //();
-
     }
 
     @Then("user verifies that the date selection window is visible")
@@ -51,9 +49,7 @@ public class US116_BedAndBreakfastStepD {
         String text = bab.theNumberOfPage.getText();
         //System.out.println(text);
         Assert.assertEquals(pageNum, text);
-
     }
-
 }
 
 
